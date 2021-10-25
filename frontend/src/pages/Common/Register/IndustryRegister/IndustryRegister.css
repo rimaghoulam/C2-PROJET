@@ -1,0 +1,96 @@
+.MuiTypography-body1 {
+  font-size: 0.8rem;
+}
+
+.addSocialButton {
+  color: grey;
+  text-decoration: none;
+}
+
+.space_rows {
+  margin-bottom: 1rem;
+}
+
+.adjust {
+  display: inline-block;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.social-error-border,
+.social-error-border:focus,
+.selector-error-border {
+  border: 2px solid red !important;
+  border-radius: 7px;
+  padding: 0;
+}
+
+.css-1pahdxg-control {
+  border: inherit !important;
+  box-shadow: inherit !important;
+}
+.selector-error-border .css-1pahdxg-control {
+  border: none !important;
+  box-shadow: none !important;
+}
+@media screen and (max-width: 600px) {
+  .MuiTypography-body1 {
+    margin-left: 10px !important;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .form-control-comp {
+    width: 100%;
+  }
+  .social_selector {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .btn {
+    box-shadow: none !important;
+  }
+
+  .selector_comp {
+    width: 88%;
+  }
+  .selector_comp-ar {
+    width: 88%;
+  }
+  .social_comp {
+    width: 88%;
+    margin-bottom: 10px;
+  }
+  .social_comp-ar {
+    width: 88%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .checkbox {
+    margin-left: 5px !important;
+  }
+  .social_text {
+    margin-left: 10px;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .form-control-comp {
+    width: 100%;
+  }
+  .social_comp {
+    width: 62% !important;
+    margin-left: 5px;
+  }
+  .social_comp-ar {
+    width: 62% !important;
+    margin-right: 5px;
+  }
+  .selector_comp {
+    width: 30%;
+  }
+  .selector_comp-ar {
+    width: 30%;
+  }
+}

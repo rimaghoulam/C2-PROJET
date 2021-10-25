@@ -1,0 +1,51 @@
+/* @font-face {
+  font-family: "SharpSans" !important;
+  src: url("SharpSans-Medium.woff") format("woff")     
+} */
+
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: 'cnam';
+  src: local('cnam'),
+       url('assets/fonts/SharpSans-Medium.woff') format('woff'), 
+       url('assets/fonts/SharpSans-Medium.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'cnam-bold';
+  src: local('cnam-bold'),
+       url('assets/fonts/SharpSans-Bold.woff') format('woff'), 
+       url('assets/fonts/SharpSans-Bold.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'cnam-ar';
+  src: local('cnam-ar'),
+       /* url('fonts/KanunAR-Regular.otf') format('otf'),  */
+       url('assets/fonts/KanunAR-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'cnam-light-ar';
+  src: local('cnam-light-ar'),
+       /* url('fonts/KanunAR-Light.otf') format('otf'),  */
+       url('assets/fonts/KanunAR-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'cnam-bold-ar';
+  src: local('cnam-bold-ar'),
+       /* url('fonts/KanunAR-Bold.otf') format('otf'),  */
+       url('assets/fonts/KanunAR-Bold.ttf') format('truetype')
+}
+

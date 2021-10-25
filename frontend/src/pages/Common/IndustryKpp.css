@@ -1,0 +1,27 @@
+@media screen and (min-width : 1900px){
+
+    .large {
+      padding: 5rem 0% !important;
+    }
+  
+  }
+
+.toSelectFromAPI h6 {
+  font-size: 18px;
+}
+
+.eligibility-table tbody th{
+  padding-left: 1% !important;
+}
+
+.eligibility-table tbody td{
+  padding-left: 1.5% !important;
+}
+
+.eligibility-table-ar tbody th{
+  padding-right: 1% !important;
+}
+
+.eligibility-table-ar tbody td{
+  padding-right: 1.5% !important;
+}

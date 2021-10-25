@@ -1,0 +1,7 @@
+.break-before-here{
+    page-break-before: always; 
+}
+
+.break-after-here{
+    page-break-after: always; 
+}

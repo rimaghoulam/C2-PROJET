@@ -1,0 +1,10 @@
+.dash {
+    list-style-type: '-     ';
+}
+
+@media screen and (min-width: 600px) {
+
+    .challenge_guide {
+        margin-top: -50px
+    }
+}

@@ -1,0 +1,16 @@
+.MuiTableHead-root > tr > th:nth-child(1) {
+    padding-left: 10px !important;
+}
+
+/* .MuiTableBody-root > tr > td:nth-child(3) {
+    padding-left: 30px !important;
+}
+.MuiTableBody-root > tr > td:nth-child(4) {
+    padding-left: 30px !important;
+}
+
+.MuiTableBody-root > tr > td:nth-child(5) {
+    padding-left: 30px !important;
+}
+ */
+

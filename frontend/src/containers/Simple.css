@@ -1,0 +1,58 @@
+.simple-Left, .simple-Right{
+    padding: 2.5rem 7rem !important;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.simple-Left{
+    overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+/* .simple-Left::-webkit-scrollbar {
+    display: none;
+} */
+
+.simple-Left::-webkit-scrollbar {
+    background: rgb(197, 197, 197);
+    width: 7px;
+    border-radius: 10px;
+}
+
+.simple-Left::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.simple-Left::-webkit-scrollbar-thumb {
+  background: rgb(155, 155, 155);
+  border-radius: 10px;
+}
+
+
+@media (max-width: 991px) {
+    .simple-Left, .simple-Right{
+        padding: 2.5rem 2.5rem !important;
+        height: auto;
+    }
+}
+
+
+
+
+
+.simple-Left{
+    background-color: rgb(243, 240, 240);
+}
+
+.simple-Right{
+    background-color: rgb(198 2 36);
+    color: white;
+    padding: 2.5rem 3.5rem !important;
+}
+
+@media (min-width: 991.5px) and (max-width:1440px) {
+    .simple-Left {
+        padding: 2.5rem 4rem !important;
+    }
+}

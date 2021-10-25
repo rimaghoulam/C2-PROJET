@@ -1,0 +1,39 @@
+.challengeIcon {
+  background-color: #ccf0eb;
+  border-radius: 11%;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.description {
+  max-width: 90%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #7c7c7c;
+  font-size: 0.9rem;
+}
+
+.jobStatusButton {
+  background: #f7de9a;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+  color: black;
+  font-weight: 550;
+  cursor: default;
+  text-transform: uppercase;
+}
+
+.pdfButton {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}

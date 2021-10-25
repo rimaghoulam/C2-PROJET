@@ -1,0 +1,17 @@
+.noScrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .noScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+  
+#lastDiscussion {
+  margin-bottom: 10px;
+}

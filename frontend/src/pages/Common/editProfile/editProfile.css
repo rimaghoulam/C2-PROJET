@@ -1,0 +1,12 @@
+@media only screen and (max-width: 600px){
+
+    .circlemob_wrapper{
+        display: block !important;
+        padding: 0 !important;
+    }
+
+    .circlemob{
+        width: 55px!important;
+        height: 55px!important;
+    }
+}

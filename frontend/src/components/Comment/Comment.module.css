@@ -1,0 +1,11 @@
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 13px;
+}
+
+hr {
+  width: 100%;
+}

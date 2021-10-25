@@ -1,0 +1,10 @@
+/* tr.MuiTableRow-root > td.MuiTableCell-body > .d-flex {
+    padding-left: 10px !important
+} */
+
+div#success {
+    justify-content: center;
+}
+div#success > .modal-content {
+    width: 70% !important
+}

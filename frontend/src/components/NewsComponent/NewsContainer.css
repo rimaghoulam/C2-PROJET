@@ -1,0 +1,9 @@
+.news-img {
+    height: 50%;
+}
+
+@media (min-width:1600px) {
+    .news-img {
+        height: 70%;
+    }
+}

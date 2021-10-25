@@ -1,0 +1,155 @@
+---
+stages:
+  - lint
+  - build
+  - deploy
+  - test
+  - destroy
+variables:
+  DOCKERFILE_NAME: "backend/Dockerfile"
+include:
+  # lint
+  - project: 'tirc-infrastructure/helper'
+    file: '/lint/yamllint.ci.yml'
+  # test
+  - template: Verify/Browser-Performance.gitlab-ci.yml
+  - template: DAST.gitlab-ci.yml
+  #code_quality
+  - template: Code-Quality.gitlab-ci.yml
+  #destroy
+  - project: 'tirc-infrastructure/helper'
+    file: '/destroy/destroy-k8s.ci.yml'
+
+yamllint:
+  allow_failure: true
+  tags:
+    - kubernetes
+.build:
+  stage: build
+  variables:
+    DOCKER_HOST: tcp://localhost:2375/
+    DOCKER_TLS_CERTDIR: ""
+  image: docker:19.03.0
+  services:
+    - docker:19.03.0-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+build-backend-image:
+  extends: .build
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    ## - docker pull $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:latest
+  script:
+    - cd ./backend
+    - docker build --cache-from $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:latest -t  $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:$CI_PIPELINE_IID .
+    - docker tag  $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:$CI_PIPELINE_IID $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:latest
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:$CI_PIPELINE_IID
+    - docker push $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/backend:latest
+build-frontend-image:
+  extends: .build
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+   ## - docker pull $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:latest
+  script:
+    - cd ./frontend
+    - docker build --cache-from $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:latest -t $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:$CI_PIPELINE_IID .
+    - docker tag $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:$CI_PIPELINE_IID $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:latest
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:$CI_PIPELINE_IID
+    - docker push $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG$IMAGE_SUFFIX/frontend:latest
+.deploy:
+  stage: deploy
+  image: gitregistry.kaust.edu.sa/tirc-infrastructure/utilities/kubectl
+  environment:
+    name: ssat/$CI_COMMIT_REF_SLUG
+    url: https://$PORTAL_URL
+  tags:
+    - kubernetes
+  before_script:
+    - kubectl version
+    - kubectl create configmap backend-env --from-env-file=./backend/.env --dry-run=client  -o yaml |kubectl apply -f-
+  only:
+    - merge_requests
+    - master
+deploy:
+  extends: .deploy
+  environment:
+    on_stop: destroy
+  variables:
+    DEPLOY_HOST: $PORTAL_URL
+  script:
+    - kubectl create secret docker-registry gitregcred --docker-server=${CI_REGISTRY} --docker-username=${CI_DEPLOY_USER} --docker-password=${CI_DEPLOY_PASSWORD} --docker-email=${GITLAB_USER_EMAIL} --dry-run=client -o yaml > gitlab-reg.yaml
+    - kubectl apply -f gitlab-reg.yaml
+    - cat kube-deploy.yml | envsubst | kubectl apply -f -
+  tags:
+    - kubernetes
+review:
+  extends: .deploy
+  environment:
+    name: ssat/review/${CI_COMMIT_REF_SLUG}
+    url: https://${CI_COMMIT_REF_SLUG}-$PORTAL_URL
+    on_stop: stop_review
+  variables:
+    DEPLOY_HOST: ${CI_COMMIT_REF_SLUG}-$PORTAL_URL
+  script:
+    - kubectl create secret docker-registry gitregcred --docker-server=${CI_REGISTRY} --docker-username=${CI_DEPLOY_USER} --docker-password=${CI_DEPLOY_PASSWORD} --docker-email=${GITLAB_USER_EMAIL} -o yaml | kubectl apply -f -
+    - cat kube-deploy.yml | envsubst | kubectl apply -f -
+  tags:
+    - kubernetes
+  except:
+    - master
+stop_review:
+  extends: .deploy
+  environment:
+    action: stop
+    name: ssat/review/${CI_COMMIT_REF_SLUG}
+    url: https://${CI_COMMIT_REF_SLUG}-$PORTAL_URL
+    on_stop: stop_review
+  variables:
+    DEPLOY_HOST: ${CI_COMMIT_REF_SLUG}-$PORTAL_URL
+  script:
+    - kubectl create secret docker-registry gitregcred --docker-server=${CI_REGISTRY} --docker-username=${CI_DEPLOY_USER} --docker-password=${CI_DEPLOY_PASSWORD} --docker-email=${GITLAB_USER_EMAIL} -o yaml | kubectl delete -f -
+    - cat kube-deploy.yml | envsubst | kubectl delete -f -
+  tags:
+    - kubernetes
+  when: manual
+  except:
+    - master
+performance:
+  stage: test
+  tags:
+    - kubernetes
+  image: docker:19.03.0
+  services:
+    - docker:19.03.0-dind
+  variables:
+    DOCKER_HOST: tcp://localhost:2375/
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+    KUBE_INGRESS_BASE_DOMAIN: kcp.kaust.edu.sa
+    URL: https://$PORTAL_URL
+  only:
+    - master
+  allow_failure: true
+dast:
+  stage: test
+  tags:
+    - kubernetes
+  variables:
+    DAST_WEBSITE: https://$PORTAL_URL
+    DAST_FULL_SCAN_ENABLED: "true"
+  allow_failure: true
+code_quality:
+  stage: test
+  artifacts:
+    paths: [gl-code-quality-report.json]
+  allow_failure: true
+  tags:
+    - kubernetes
+destroy:
+  extends: .destroy
+  environment:
+    name: ssat/$CI_COMMIT_REF_SLUG
+  script:
+    - cat kube-deploy.yml | envsubst | kubectl delete  -f -

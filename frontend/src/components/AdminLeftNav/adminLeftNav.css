@@ -1,0 +1,139 @@
+:root {
+  --primary-green: #00ab9e;
+  --text-color: #555;
+}
+
+.mainContainer {
+  height: calc(100vh - 101px) !important;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  background-color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px solid #ddd;
+  transition: all 200ms;
+}
+
+.mainContainer .leftNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer .MuiSvgIcon-root {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+.mainContainer .leftNav a,
+.mainContainer .leftNav p {
+  color: var(--text-color);
+}
+
+.mainContainer .nav-null {
+  padding-left: 1rem;
+}
+
+.mainContainer .MuiListItem-gutters {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.mainContainer .MuiListItemIcon-root {
+  min-width: unset !important;
+  padding-top: 3px;
+}
+
+.left-nav-active .MuiListItemIcon-root,
+.left-nav-active .MuiTypography-body1,
+.left-nav-active path {
+  color: #c50225 !important;
+  font-weight: bold !important;
+}
+
+.left-nav-active {
+  border-left: 3px solid #c50225;
+}
+
+.alignCenter {
+  margin-left: 35px;
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+  background: rgba(219, 219, 219, 0.774);
+  width: 7px;
+  border-radius: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(182, 182, 182, 0.774);
+  border-radius: 10px;
+}
+
+/* * * ******************** ********* arabic */
+.left-nav-active-ar {
+  border-right: 3px solid var(--primary-green);
+}
+
+.left-nav-active-ar .MuiListItemIcon-root,
+.left-nav-active-ar .MuiTypography-body1,
+.left-nav-active-ar path {
+  color: var(--primary-green) !important;
+  font-weight: bold !important;
+}
+
+/* * * ******************** ********* accordion */
+
+.mainContainer .MuiAccordionDetails-root {
+  padding: 3px 12px 6px 12px;
+}
+
+.mainContainer .MuiPaper-root > div:nth-child(2) {
+  box-shadow: none !important;
+}
+
+.mainContainer .MuiAccordion-root::before {
+  content: none !important;
+}
+
+.accordion {
+  background-color: inherit !important;
+}
+
+.mainContainer .MuiAccordion-root.Mui-expanded {
+  margin: 0px;
+}
+
+.mainContainer path {
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 1101px) {
+  .mainContainer {
+    height: 0 !important;
+    display: none !important;
+  }
+
+  .smallMainContainer {
+    height: calc(100vh - 101px) !important;
+    width: 100%;
+    overflow-y: auto;
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .custom_scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .custom_scrollbar {
+    height: auto !important;
+  }
+}

@@ -1,0 +1,51 @@
+ .dropdown-menu {
+    transform: none !important;
+}
+
+.dropdown-menu-right {
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 99 !important
+}
+ 
+button.dropdown-item:active {
+    background-color: transparent  !important;
+}
+
+.drop-button {
+    border-color: transparent;
+    padding: 0
+}
+.MuiSvgIcon-root {
+    padding-bottom: 0 !important
+}
+/* .MuiTableHead-root > tr > th:nth-child(1) {
+    padding: 0 !important;
+} */
+.MuiTableCell-paddingNone {
+    padding: 0 !important;
+}
+.btn-secondary:hover {
+    border-color: transparent
+}
+.btn-secondary:focus {
+    border-color: transparent;
+    box-shadow: none !important;
+}
+.btn-secondary:active {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+.show>.btn-secondary.dropdown-toggle {
+    border-color: transparent !important;
+}
+
+
+div#success {
+    justify-content: center;
+}
+div#success > .modal-content {
+    width: 70% !important
+}
+

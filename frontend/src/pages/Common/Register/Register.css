@@ -1,0 +1,41 @@
+/* .modal-content {
+    width: 80% ;
+    
+} */
+.MuiTypography-root.MuiFormControlLabel-label {
+    font-family: cnam;
+    font-size: 0.9rem;
+}
+svg {
+    zoom: 0.9 !important
+}
+.MuiCheckbox-root {
+    color: 	#A9A9A9 !important
+}
+
+@media (max-width: 1200px) {
+    .show-password-icon {
+        right: 30px !important;
+    }
+    .show-password-icon-ar {
+        left: 30px !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .show-password-icon {
+        right: 5px !important;
+    }
+    .show-password-icon-ar {
+        left: 5px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .show-password-icon {
+        right: 20px !important;
+    }
+    .show-password-icon-ar {
+        left: 20px !important;
+    }
+}

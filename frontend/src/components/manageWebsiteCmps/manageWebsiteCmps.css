@@ -1,0 +1,22 @@
+.cont {
+  height: calc(100vh - 101px) !important;
+  overflow-y: auto !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.addButton {
+  width: fit-content;
+  cursor: pointer;
+  background-color: #00ab9e !important;
+  border: none;
+  border-radius: 5px;
+  padding: 0.35rem 1rem;
+  color: white;
+  margin-left: 1rem;
+}
+
+.greenButton {
+  background-color: #00ab9e !important;
+  border-color: #00ab9e !important;
+}

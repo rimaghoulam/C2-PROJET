@@ -1,0 +1,5 @@
+.quill .ql-snow .ql-editor {
+    min-height: 100px !important;
+    overflow-y: scroll;
+    height: initial !important;
+}

@@ -1,0 +1,244 @@
+.header-container {
+	position: fixed !important;
+	height: 101px;
+  width: 100%;
+  display: flex;
+	flex-direction: column;
+	font-size: 15px;
+	background: white;
+	color: black;
+	top: 0px;
+	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	z-index: 998;
+}
+
+.header-links-ar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 101px;
+  font-size: 15px;
+  background: white;
+  color: black;
+  padding: 0.5rem 0;
+  top: 0px;
+  position: sticky !important;
+  /* box-shadow: 0 1px 5px 0 rgba(0,0,0,.2); */
+  z-index: 998;
+}
+
+hr {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.notifications:last-child hr {
+  display: none;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 101px;
+  font-size: 15px;
+  background: white;
+  color: black;
+  padding: 0.5rem 0;
+  top: 0px;
+  position: sticky !important;
+  /* box-shadow: 0 1px 5px 0 rgba(0,0,0,.2); */
+  z-index: 998;
+}
+
+.header-links::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.header-links::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid rgba(240, 232, 232, 0.7); /* should match background, can't be transparent */
+}
+
+.header-linkshover::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  opacity: 0;
+  bottom: -5px;
+  background: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.header-linkshover {
+  position: relative;
+  margin-top: 10px;
+  display: none;
+}
+
+.header-linkshover:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.header-links ul li:hover {
+  color: black;
+}
+
+.navlogo {
+  justify-self: start;
+  cursor: pointer;
+}
+.navlogo-ar {
+  justify-self: start;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-menu {
+  display: block;
+  /* width:100%; */
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  text-align: left;
+  /* margin-right: 20px; */
+  margin: 0 20px 0 0;
+  padding: 0;
+
+  cursor: pointer;
+}
+.nav-menu li {
+  white-space: nowrap;
+  margin-left: 3em;
+}
+
+@media screen and (max-width: 600px) {
+  .navlogo img {
+    height: 45px !important ;
+  }
+  .navlogo-ar img {
+    height: 45px !important ;
+  }
+  .navlogo {
+      margin-left: 20px !important;
+  }
+  
+  .nav-menu li {
+    margin-top: 1.5rem !important;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+	.remove-on-mobile {
+		display: none;
+	}
+
+  .header-links-ar {
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center;
+    height: 101px;
+    font-size: 15px;
+    background: white;
+    color: black;
+    padding: 0.5rem 0;
+    top: 0px;
+    position: sticky !important;
+    z-index: 998;
+  }
+  
+  .header-links {
+    position: relative;
+  }
+
+  .header-linkshover {
+    margin-top: 0 !important;
+    display: block !important;
+  }
+
+  .menu-icon {
+    display: flex !important;
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+    /* transform: translate(-100%, 60%); */
+    margin-right: 22px;
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+  .menu-icon-notification {
+    display: flex !important;
+    position: absolute;
+    top: 22px !important;
+    right: 70px;
+    /* transform: translate(-100%, 60%); */
+    margin-right: 22px;
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+  .menu-icon-help {
+    display: flex !important;
+    position: absolute;
+    top: 17px !important;
+    right: 140px;
+    /* transform: translate(-100%, 60%); */
+    margin-right: 22px;
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+
+  .nav-menu li.first {
+    margin-top: 3em !important;
+  }
+  .nav-menu li {
+    margin-top: 1.5rem !important;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    background: white;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+    .nav-menu {
+    margin-top: 0.5%;
+    align-items: center;
+  }
+  .nav-menu .header_shown {
+    display: inline-block !important;
+  }
+  .nav-menu .admin {
+    display: inline !important;
+  }
+
+  .mobile {
+    display: none !important;
+  }
+}
+
+

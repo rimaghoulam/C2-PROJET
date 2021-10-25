@@ -1,0 +1,187 @@
+.show_profile_elements {
+  display: none;
+}
+
+.show_profile {
+  display: none;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+header .navbar-nav .nav-link,
+header .navbar-nav .navbar .dropdown-toggle,
+header .navbar .navbar-nav .dropdown-toggle {
+  color: #fff;
+}
+
+header .navbar-nav .nav-link:focus,
+header .navbar-nav .navbar .dropdown-toggle:focus,
+header .navbar .navbar-nav .dropdown-toggle:focus,
+header .navbar-nav .nav-link:hover,
+header .navbar-nav .navbar .dropdown-toggle:hover,
+header .navbar .navbar-nav .dropdown-toggle:hover {
+  color: #fff;
+}
+
+header .nav.navbar-nav {
+  position: absolute;
+  padding-bottom: 5px;
+  top: unset;
+  right: 20px;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:hover {
+  border-top: 2px solid #67c2ef;
+}
+
+
+
+.nav-links-mobile {
+  display: none;
+}
+.fa-bars {
+  color: grey;
+}
+
+
+
+ul li span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.MuiBadge-colorPrimary {
+  background-color: rgb(198 2 36) !important;
+}
+.break_line {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.app-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  overflow-x: hidden;
+  margin-top: 101px;
+}
+
+.app-footer {
+  background: transparent;
+  font-size: 12px;
+  flex: 0 0 30px;
+  min-height: 50px;
+  padding: 0 1rem;
+  line-height: 50px;
+  color: #2a2c36;
+}
+
+#back-to-top-div {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  z-index: 1;
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button,
+.pointer {
+  cursor: pointer;
+}
+
+.nav-null {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.nav-active {
+  color: rgb(198 2 36) !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* small screens */
+
+@media screen and (max-width: 1100px) {
+  .language-on-mobile {
+    left: 45px;
+  }
+
+  .show-on-mobile {
+    display: block;
+  }
+
+
+  .show_profile_elements {
+    display: block;
+  }
+
+
+
+  .show_notification {
+    display: block !important;
+    width: 25vw;
+    height: 380px;
+    overflow-y: scroll;
+  }
+  .desktop {
+    display: none !important;
+  }
+}
+
+/* large screens */
+
+@media screen and (min-width: 1101px) {
+  .show_profile {
+    display: block !important;
+  }
+
+  #one:hover .dropdown-menu {
+    display: block !important;
+  }
+  #two:hover .dropdown-menu {
+    display: block !important;
+  }
+  #three:hover .dropdown-menu {
+    display: block !important;
+  }
+
+  /* #notification:hover .dropdown-menu{
+   display:block !important;
+    width:   25vw;
+    height:380px;
+    overflow-y:scroll;
+ } */
+
+  .mobile {
+    display: none !important;
+  }
+
+  /* .dropdown-menu.show {
+   display:none
+ } */
+
+  .show_notification {
+    display: block !important;
+    width: 30vw !important;
+    height: 380px;
+    overflow-y: scroll;
+  }
+}
+

@@ -1,0 +1,1321 @@
+:root {
+	--primary-color: hsl(172, 100%, 35%);
+	--primary-color--10: hsl(172, 100%, 45%);
+	--secondary-color: hsl(34, 100%, 46%);
+	--secondary-color--10: hsl(34, 100%, 56%);
+	--third-color: hsl(34, 100%, 46%);
+	--third-color--10: hsl(34, 100%, 56%);
+	--fourth-color: hsl(63, 100%, 37%);
+	--fourth-color--10: hsl(63, 100%, 47%);
+}
+
+.App {
+	text-align: center;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.btn-link {
+	text-decoration: none !important;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.app,
+app-dashboard,
+app-root {
+	display: flex;
+	flex-direction: column;
+	min-height: 99.9vh;
+}
+
+body {
+	background: #f4f5f6;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	/* font-family: "SharpSans"; */
+	/* font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif; */
+	/* font-family: "SharpSans-Medium" !important; */
+	font-family: "cnam-light-ar" !important;
+	font-size: 0.875rem;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #2a2c36;
+	margin: 0;
+	padding-right: 0px !important;
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+	background: rgba(219, 219, 219, 0.774);
+	width: 7px;
+	border-radius: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb {
+	background: rgba(182, 182, 182, 0.774);
+	border-radius: 10px;
+}
+
+.request_meeting_btn {
+	padding-left: 8.4% !important;
+}
+
+.request_meeting_btn_ar {
+	padding-right: 10% !important;
+}
+
+.request_meeting_industry_btn_ar {
+	padding-right: 9% !important;
+}
+
+.choice_selection {
+	margin-right: 0 !important;
+}
+
+/*   ///////////////////////////////////////////////////////////////  NDA page*/
+.dropzone {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border-width: 2px;
+	border-radius: 2px;
+	border-color: lightgrey;
+	border-style: dashed;
+	background-color: transparent;
+	color: #bdbdbd;
+	outline: none;
+	transition: border 0.24s ease-in-out;
+}
+.dropzone:focus {
+	border-color: rgb(198 2 36);
+}
+#green.dropzone:focus {
+	border-color: rgb(198 2 36);
+}
+
+.dropzone.disabled {
+	opacity: 0.6;
+}
+
+.css-1wa3eu0-placeholder {
+	font-size: 16px;
+	color: #6c757d !important;
+}
+.css-2b097c-container#length {
+	z-index: 999;
+}
+
+.css-1uccc91-singleValue {
+	color: #383d42 !important;
+}
+/*  ///////////////////////////////////////////////////////////////   Form validation errors / borders ... */
+textarea.max_char:focus {
+	outline-color: red !important;
+}
+
+input[type="checkbox"].error_check {
+	box-shadow: inset 0 0 0 1.6px #ffc10796;
+}
+input[type="checkbox"] {
+	filter: hue-rotate(300deg);
+}
+.btn-link:hover {
+	color: rgb(198 2 36) !important;
+}
+.btn-link:focus {
+	color: rgb(198 2 36) !important;
+}
+
+.break_line {
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.errors {
+	padding: 0 !important;
+	margin-top: 5px;
+	color: red;
+	display: flex;
+	font-weight: normal;
+}
+.errors_c {
+	color: red;
+	margin-bottom: 10px;
+}
+
+.border_form {
+	border-radius: 5px;
+	border: 1px solid red;
+}
+
+.border_form_selector .css-yk16xz-control {
+	border-color: red !important;
+}
+
+.back:hover {
+	cursor: pointer;
+	color: black;
+}
+
+.comment:hover {
+	cursor: pointer;
+}
+
+.tableScroll {
+	background-color: #f4f4f4;
+	width: 100%;
+}
+
+.main {
+	background-color: #fffdfc;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.Btncancel {
+	color: black;
+	border: 1px solid gray;
+	background-color: transparent;
+	padding: 8px 18px;
+}
+
+.btnsave {
+	color: #fff;
+	border: none;
+	background-color: rgb(198 2 36);
+	padding-left: 28px;
+	padding-right: 28px;
+}
+
+.react-datepicker-wrapper {
+	width: 100%;
+}
+
+.form-control {
+	box-shadow: 0px 1px 5px -2px #888888;
+	height: calc(2.1em + 0.69rem + 2px);
+}
+
+.no_shadow {
+	box-shadow: none;
+}
+
+.bold_600 {
+	font-weight: 600;
+}
+.bold_700 {
+	font-weight: 700;
+}
+
+.css-g1d714-ValueContainer {
+	height: calc(1.99em + 0.62rem + 4px);
+}
+
+.css-1okebmr-indicatorSeparator {
+	display: none;
+}
+
+textarea {
+	border: 1px solid #ced4da;
+	font-size: 1rem;
+	font-weight: 400;
+	border-radius: 0.25rem;
+	box-shadow: 0px 1px 5px -2px #888888;
+}
+
+textarea:focus {
+	outline-color: rgb(198 2 36) !important;
+}
+
+.form-control:focus {
+	border: 2px solid rgb(198 2 36);
+	box-shadow: none;
+}
+
+.css-yk16xz-control {
+	font-size: 0.99rem;
+	font-weight: 400;
+	border-style: none !important;
+	/* border-radius: .75rem; */
+	box-shadow: 0px 1px 5px -2px #888888 !important;
+	min-height: 45px !important;
+	border: 1px solid #ced4da !important;
+	/* border-radius: 0px !important; */
+	/* border-radius: 0px !important; */
+}
+
+.css-1pahdxg-control {
+	border-color: rgb(198 2 36) !important;
+	box-shadow: 0 0 0 1px rgb(198 2 36) !important;
+}
+.css-1n7v3ny-option {
+	background-color: #90ee9069 !important;
+}
+.css-9gakcf-option {
+	background-color: rgb(198 2 36) !important;
+}
+
+.rad .css-yk16xz-control {
+	box-shadow: 0px 0px 0px 0px #888888 !important;
+}
+
+#industry .css-g1d714-ValueContainer {
+	min-height: 47px;
+	height: 100% !important;
+}
+#industry .css-1rhbuit-multiValue {
+	max-width: 90%;
+}
+
+.MuiPaper-root .MuiToolbar-root {
+	padding: 0px !important;
+	margin-bottom: 10px !important;
+}
+
+.MuiPaper-root > div:nth-child(2) {
+	box-shadow: 0px 1px 5px 2px rgb(0 0 0 / 25%) !important;
+	border-radius: 5px !important;
+}
+
+.MuiTableFooter-root {
+	background: #f4f5f6;
+}
+
+.MuiInput-underline:before {
+	display: none;
+}
+.MuiInput-underline:after {
+	display: none;
+}
+
+.MuiInput-root {
+	background-color: white;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	padding: 4px;
+}
+.MuiPaper-elevation1 {
+	box-shadow: none !important;
+}
+
+.MuiTableHead-root {
+	background-color: rgb(234, 234, 234) !important;
+}
+
+.MuiTableCell-head {
+	color: #616161 !important;
+	background-color: #f5f1ee !important;
+	font-weight: 600 !important;
+	line-height: normal !important;
+	padding: 10px 15px !important;
+}
+
+.MuiTableCell-paddingNone {
+	padding: 0rem 15px !important ;
+}
+
+.MuiSelect-icon {
+	display: none !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+	border: 0px !important;
+	outline: 0px !important;
+}
+
+.MuiListItem-root.Mui-selected,
+.MuiListItem-root.Mui-selected:hover {
+	background-color: transparent !important;
+}
+.MuiListItem-root.Mui-selected:hover {
+	background-color: #d8d8d8 !important;
+}
+
+.css-2b097c-container {
+	padding: 0 !important;
+}
+
+.fill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.fill img {
+	flex-shrink: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+	color: rgb(198 2 36) !important;
+}
+
+div[class^="MTableToolbar-highlight-"],
+div[class*="MTableToolbar-highlight-"] {
+	background-color: #c50225cc  !important;
+	color: grey !important;
+}
+
+.MuiBadge-colorPrimary {
+	background: #e98300 !important;
+}
+
+.about_title {
+	margin-left: 10%;
+}
+
+.about_title-ar {
+	margin-right: 8%;
+}
+
+.css-1rhbuit-multiValue {
+	background-color: #c50225cc !important;
+	color: white;
+}
+
+.css-12jo7m5 {
+	color: white !important;
+}
+
+.css-tlfecz-indicatorContainer {
+	padding-left: 0 !important;
+}
+
+.MuiIconButton-root:hover {
+	background-color: transparent !important;
+}
+
+.MuiTableFooter-root {
+	background: transparent !important;
+}
+
+.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+	background: #c50225cc  !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+	background-color: rgb(198 2 36) !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+	background-color: rgb(198 2 36) !important;
+}
+
+.dropdown-menu {
+	width: 240px;
+}
+
+.checkbox:checked:before {
+	background-color: green !important;
+}
+
+.MuiFormGroup-root {
+	margin-bottom: -14px !important;
+	margin-top: 7px;
+}
+
+.bord .css-yk16xz-control {
+	border: 1px solid #cbcbcb !important;
+}
+
+.Toastify__toast--success {
+	background: rgb(198 2 36) !important;
+	color: var(--toastify-text-color-success);
+}
+
+.Toastify__toast-icon svg {
+	fill: white !important;
+}
+
+.Toastify__toast--error {
+	background: var(--toastify-color-error);
+	color: var(--toastify-text-color-error);
+}
+
+.Toastify__close-button--light {
+	color: white;
+}
+
+.MuiTableHead-root > tr > th:nth-child(1) {
+	padding-left: 1% !important;
+}
+
+.selectorTable .MuiTableHead-root > tr > th:nth-child(1) {
+	padding-left: 0px !important;
+}
+.jodit-container .jodit-workplace .jodit-wysiwyg,
+.jodit-container .jodit-workplace .jodit-wysiwyg_iframe,
+.jodit .jodit-workplace .jodit-wysiwyg,
+.jodit .jodit-workplace .jodit-wysiwyg_iframe {
+	height: 50vh !important;
+	overflow-y: auto !important;
+}
+
+.jodit-container.jodit-source__mode .jodit-source {
+	height: 50vh !important;
+	overflow-y: auto !important;
+}
+
+.homeTestimonials {
+	margin: 1% 2% !important;
+}
+.editCompanyContainer {
+	margin-left: 15vw;
+}
+.editCompanyContainer-ar {
+	margin-right: 15vw;
+}
+
+.homePageBigContainer {
+	overflow: hidden !important;
+}
+
+.css-2b097c-container#length {
+	z-index: 1 !important;
+}
+
+[tabindex]:focus {
+	background-color: inherit !important;
+}
+
+/* to change pink color to green in selection tables in build*/
+/* .jss41{  
+  background-color: rgb(198 2 36) !important;
+  color: black !important;
+}
+.jss22{
+  background-color: rgb(198 2 36) !important;
+  color: black !important;
+} */
+
+.tableWithEdit div[class^="Component-horizontalScrollContainer-"] {
+	overflow-x: unset !important;
+}
+
+.tableWithEdit div[class*="Component-horizontalScrollContainer-"] {
+	overflow-x: unset !important;
+}
+
+.tableWithEdit div[class^="Component-horizontalScrollContainer-"] div {
+	overflow-y: unset !important;
+}
+
+.tableWithEdit div[class*="Component-horizontalScrollContainer-"] div {
+	overflow-y: unset !important;
+}
+
+.learnMoreHome:hover > .learnMoreHomeArrow {
+	animation: moveToRight 350ms ease-in-out;
+	animation-fill-mode: forwards;
+}
+.learnMoreHome:hover > .learnMoreHomeArrow-ar {
+	animation: moveToLeft 350ms ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveToRight {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(2px);
+	}
+	50% {
+		transform: translateX(4px);
+	}
+	75% {
+		transform: translateX(6px);
+	}
+	100% {
+		transform: translateX(8px);
+	}
+}
+
+@keyframes moveToLeft {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(-2px);
+	}
+	50% {
+		transform: translateX(-4px);
+	}
+	75% {
+		transform: translateX(-6px);
+	}
+	100% {
+		transform: translateX(-8px);
+	}
+}
+
+/* table footer pagination for arabic */
+.MuiTableCell-footer {
+	direction: ltr;
+}
+/* tables header for arabic  */
+.table-arabic th,
+.table-arabic tbody td {
+	text-align: right !important;
+}
+
+.industry-dashboard-discussion {
+	background-color: #f5f1ee;
+}
+.menu-icon-notification {
+	display: flex !important;
+	/* position: absolute;  */
+	top: 22px !important;
+	right: 70px;
+	/* transform: translate(-100%, 60%); */
+	margin-right: 22px;
+	font-size: 2.2rem;
+	cursor: pointer;
+}
+
+.selectorTable .MuiTableCell-paddingNone {
+	padding: 0px !important;
+}
+
+.switch-button .MuiSwitch-root {
+	top: -7px;
+}
+
+.adminChartsHeight {
+	height: 60vh;
+}
+
+.homeSliderImg {
+	min-height: calc(100vh - 101px) !important;
+}
+
+.homeSlider {
+	padding: 0;
+}
+
+.homeSlider .slick-arrow {
+	margin: 0 5vw;
+	z-index: 50;
+}
+
+.adminLeftNavIcon svg {
+	color: grey;
+	font-size: 2.5rem;
+}
+
+.adminDashboardCard {
+	background-color: white;
+	border-radius: 10px;
+	padding: 15px 20px;
+	box-sizing: border-box;
+}
+
+.statsHeight {
+	height: 45vh !important;
+}
+
+.pl-5pc {
+	margin-left: -5% !important;
+}
+
+@media (max-width: 500px) {
+	.homeSlider .slick-arrow {
+		margin: 0 8vw !important;
+	}
+}
+
+.BodyHeight {
+	height: calc(100vh - 101px) !important;
+	overflow-y: hidden !important;
+}
+
+.scroll-in-body {
+	overflow-y: auto;
+	height: 100% !important;
+}
+
+.statusCard {
+	background-color: white;
+	border-radius: 5px;
+}
+
+.statusCardActive {
+	background-color: rgb(198 2 36) !important;
+	color: white !important;
+}
+.whyJoinIcons {
+	height: 60px !important;
+	width: 60px !important;
+	margin-top: 25px !important;
+}
+
+.VideosPage iframe {
+	width: 100% !important;
+	height: 210px !important;
+}
+
+.photosVideosText {
+	margin: 15px 0;
+	font-size: 1rem;
+}
+
+.photoPageImage {
+	height: 200px;
+	object-fit: cover;
+}
+
+.btn-toggleChart {
+	background-color: transparent;
+	border: none;
+	color: var(--primary-color);
+	font-size: 1rem;
+	font-weight: bold;
+}
+.btn-toggleChart:hover {
+	color: var(--primary-color--10);
+}
+
+.homePageVideo {
+	height: 350px;
+	margin-top: 10%;
+	width: 100%;
+}
+
+.homePageVideo iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* ////////////////////////////// */
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+/* //*  //////////////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 2500px) {
+	.large {
+		padding: 5rem 0%;
+	}
+	.social1 {
+		margin-left: 9rem;
+	}
+}
+
+.Toastify__toast-theme--light {
+	color: white;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 2000px) and (min-width: 1600px) {
+	.adminChartsHeight {
+		height: 40vh;
+	}
+	.news_body {
+		padding: 0 2rem;
+	}
+	.largeScreen {
+		padding: 3.5rem 10rem !important;
+	}
+	.pagesHeaderTitle row {
+		justify-content: center;
+	}
+	.pagesHeaderTitle-ar row {
+		justify-content: center;
+	}
+
+	.largeFooter {
+		margin: -4rem -10rem !important;
+		padding-top: 5rem !important;
+	}
+	.largeFooterOverride {
+		margin: 0 -10rem !important;
+	}
+	.largeQuotes {
+		margin: 0px -200px !important;
+	}
+	.quotesContent {
+		margin: 0px 200px !important;
+	}
+	.industry_title {
+		margin-left: 40% !important;
+	}
+	.industry_title-ar {
+		margin-right: 38% !important;
+	}
+	.largepad {
+		padding: 3rem 15.5rem !important;
+	}
+
+	.largeFooter2 {
+		padding: 0px 19rem !important;
+	}
+	.largeFooter3 {
+		padding: 3rem 10rem !important;
+	}
+
+	.aboutMargin {
+		margin: -56px -162px !important;
+	}
+	.marb-5 {
+		margin-bottom: 5rem !important;
+	}
+	.marl-8 {
+		margin-left: 7rem !important;
+	}
+	.marr-8 {
+		margin-right: 7rem !important;
+	}
+	.homeSlider {
+		margin: 0 -200px !important;
+		margin-top: -3.5rem !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 1600px) {
+	.quote-body-container {
+		padding: 0 5% !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 1600px) {
+	.lika2_text {
+		margin-top: 3rem;
+	}
+
+	.homeTestimonials {
+		margin: 2% 10% !important;
+	}
+	.editCompanyContainer {
+		margin-left: 25vw;
+	}
+	.editCompanyContainer-ar {
+		margin-right: 25vw;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 1570px) {
+	.social2 {
+		margin-left: 6rem;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1320px) {
+	.social3 {
+		margin-left: 0;
+	}
+}
+@media screen and (width: 1024px), screen and (height: 1366px) {
+	#root {
+		overflow: hidden;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 995px) {
+	.pr-25 {
+		padding-right: 25px !important;
+	}
+	.pl-25 {
+		padding-left: 25px !important;
+	}
+
+	.tableWithEdit {
+		overflow-x: auto;
+	}
+
+	.tableWithEdit div[class^="MuiPaper-root"] div:nth-child(2) {
+		overflow-x: unset !important;
+	}
+
+	.tableWithEdit div[class^="MuiPaper-root"] div:nth-child(2) > div > div {
+		overflow-y: unset !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 991.5px) {
+	.contactStyle {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	.meeting_request_title {
+		margin-left: 20% !important;
+	}
+	.meeting_request_title_home {
+		margin-left: 21% !important;
+	}
+	.meeting_request_form {
+		margin-left: 1% !important;
+	}
+	.meeting_request_title_home-ar {
+		margin-right: 22% !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 991.5px) {
+	.BodyHeight {
+		height: auto !important;
+		overflow-y: visible !important;
+	}
+	.contact-container {
+		padding: 30px 10px 30px 10px !important;
+	}
+	.pagesHeaderTitle {
+		padding-left: 10px !important;
+	}
+	.pagesHeaderTitle-ar {
+		padding-right: 10px !important;
+	}
+	.scroll-in-body {
+		height: auto !important;
+		overflow-y: auto !important;
+	}
+	.request_meeting_btn {
+		padding-left: 0 !important;
+	}
+	.request_meeting_btn_ar {
+		padding-right: 0 !important;
+	}
+	.request_meeting_industry_btn_ar {
+		padding-right: 0% !important;
+	}
+	.tableWithEdit {
+		overflow-x: auto;
+	}
+	.remove_scroll_mobile {
+		overflow-y: initial !important;
+	}
+	.remove_customscroll_mobile::-webkit-scrollbar {
+		display: none;
+	}
+	.custom_scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.custom_scrollbar {
+		height: auto !important;
+	}
+
+	.for_reverse {
+		flex-direction: column-reverse;
+	}
+
+	.editCompanyContainer {
+		margin-left: 0 !important;
+	}
+	.editCompanyContainer-ar {
+		margin-right: 0 !important;
+	}
+	.industry {
+		margin-left: 50px !important;
+	}
+	.industry-ar {
+		margin-right: 50px !important;
+	}
+	.about_title {
+		margin-left: 25px !important;
+	}
+	.about_title-ar {
+		margin-right: 0px !important;
+	}
+	.industry-dashboard-discussion {
+		background-color: rgb(244 245 246) !important;
+		/* rgb(255 253 252) */
+	}
+	.get-started-ar {
+		display: block;
+	}
+	.success_story {
+		margin: 0 !important;
+	}
+	.success_story_ar {
+		margin-right: 6px !important;
+	}
+	.lika2 {
+		justify-content: start !important;
+	}
+	.lika2_text {
+		margin-right: 0 !important;
+	}
+
+	.first_quote {
+		padding: 0 15px !important;
+	}
+	.quote_ar {
+		padding: 0 15px !important;
+	}
+
+	.hide_scrollbar {
+		height: auto !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 800px) {
+	.rowbig {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 650px) {
+	.industry-dashboard-discussion {
+		background-color: rgb(255 253 252) !important;
+		/* rgb(255 253 252) */
+	}
+
+	.container-fluid {
+		height: 100vh;
+	}
+
+	.MuiPaper-root .MuiToolbar-root {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: -0.9rem;
+	}
+	.modal-content {
+		width: 95vw !important;
+		height: fit-content !important;
+	}
+	.postIntern .css-2b097c-container#length,
+	.css-1f43avz-a11yText-A11yText {
+		z-index: 2 !important;
+	}
+	main {
+		height: 100%;
+	}
+	.MuiTableCell-body {
+		text-align: left !important;
+	}
+	.MUI-table-cell-body-over {
+		text-align: right !important;
+	}
+	.react-datepicker__month-container {
+		z-index: 10;
+	}
+	.editProfileContainer {
+		height: 150vh !important;
+		background-color: white;
+	}
+	.MuiTablePagination-root:last-child {
+		background-color: inherit !important;
+	}
+	.contactusFooterClass {
+		margin-left: 4%;
+		text-align: left !important;
+	}
+	.main {
+		min-height: 100vh;
+		overflow-y: hidden;
+	}
+	main {
+		height: 100%;
+	}
+	.homePageBigContainer {
+		overflow: visible !important;
+	}
+	.homeTestimonials {
+		margin: 2% 2% !important;
+	}
+	.editCompanyContainer {
+		margin-left: 0 !important;
+	}
+	.editCompanyContainer-ar {
+		margin-right: 0 !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 600px) {
+	/*//////////// HOMESCREEN ////////////////*/
+	.about_industry_full_div {
+		margin-top: 6rem;
+	}
+	.why_join {
+		margin-top: 3rem;
+		margin-right: -30px;
+		margin-bottom: 100px;
+		margin-left: -30px;
+	}
+	.second_quote {
+		padding-left: 50px;
+	}
+	.second_quote-ar {
+		padding-right: 50px;
+	}
+	.industry_innovation_image {
+		margin-top: 40px;
+	}
+	.why_join_text {
+		margin-top: 80px;
+	}
+	.about_industry_title {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.quotes_div {
+		padding: 3rem 4.8rem;
+	}
+	/*///////////////////////////////////////*/
+	/* //////////////////////// Industry KPP page ////////////*/
+	.industry_title {
+		margin-left: 30%;
+	}
+	.industry_title-ar {
+		margin-right: 27%;
+	}
+
+	.about_info {
+		padding-left: 25px;
+	}
+	.guideline_info {
+		padding-left: 20px;
+	}
+	.guideline_info-ar {
+		padding-right: 20px;
+	}
+	.request_meeting {
+		margin-left: 30px;
+	}
+	.form_left {
+		padding-left: 41px;
+	}
+
+	/*//////////////////////////////////////////////////////////*/
+	.paddLeft {
+		padding-left: 0 !important;
+	}
+	.justify {
+		justify-content: center !important;
+	}
+	.width75 {
+		max-width: 75% !important;
+	}
+	.bigM {
+		margin-top: 3.5rem !important;
+		margin-bottom: 3rem !important;
+	}
+	.maxw {
+		max-width: 60% !important ;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 600px) {
+	.social4 {
+		display: none;
+	}
+	.contact-container {
+		padding: 0 !important;
+	}
+	.pagesHeaderTitle {
+		padding-left: 0 !important;
+	}
+	.pagesHeaderTitle-ar {
+		padding-right: 0 !important;
+	}
+	.companyMob {
+		margin: 0 !important;
+		margin-top: 0.5rem !important;
+	}
+
+	.about_title {
+		margin-left: 25px !important;
+		margin-bottom: 0 !important;
+	}
+	.about_title div div {
+		font-size: 1.4rem !important;
+	}
+	.about_title-ar {
+		margin-right: 25px !important;
+		margin-bottom: 0 !important;
+	}
+	.about_title-ar div div {
+		font-size: 1.4rem !important;
+	}
+	/*////////////////  HOMESCREEN /////////////*/
+	.container-fluid {
+		overflow-x: hidden;
+	}
+	.getstarted_first {
+		margin-bottom: 2rem;
+	}
+	.about_industry_image {
+		order: 1;
+	}
+	.second_quote {
+		margin-top: 3rem;
+	}
+	.quotes_div {
+		padding: 3rem 3rem;
+	}
+	/*////////////////////////////////////////*/
+
+	/*/////////////////////////// INDUSTRY KPP ///////////////*/
+
+	.industry_title {
+		margin-left: 40%;
+	}
+	.industry_title-ar {
+		margin-right: 38%;
+	}
+	.about_info {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+	.guideline_info {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+
+	.guideline_info-ar {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+	.request_meeting {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+	.request_meeting_form {
+		padding-left: 4% !important;
+		padding-right: 4% !important;
+	}
+
+	/*////////////////////////////////////////////////////////*/
+	.postButton {
+		flex-direction: column-reverse;
+	}
+	.btn-center {
+		margin-left: 0 !important;
+	}
+	.margin_b {
+		margin-bottom: 1.5rem !important;
+		margin-left: 0 !important;
+	}
+
+	.smallFooter {
+		padding: 0rem 1rem !important;
+	}
+	.logoMobile {
+		text-align: start !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	.meeting {
+		padding: 0;
+	}
+	.noPadding {
+		padding: 30px 10px !important;
+	}
+
+	.padd {
+		padding: 2rem 0.8rem !important;
+	}
+
+	.quote-body-container {
+		padding: 0 8% !important;
+	}
+	.noP {
+		padding: 0 !important;
+	}
+	.logoSmall {
+		height: 48px !important;
+		padding: 0 !important;
+	}
+	.pad-3-4 {
+		padding: 3rem 4rem;
+	}
+
+	.graphChartsClass {
+		width: 140%;
+		margin-left: -13%;
+	}
+	.recharts-legend-wrapper ul {
+		margin-left: 10% !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 570px !important;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media screen and (max-width: 340px) {
+	.logo_width_on_mobile {
+		width: 75%;
+		padding-left: 10px !important;
+	}
+
+	.logo_width_on_mobile_img {
+		width: 100%;
+	}
+}

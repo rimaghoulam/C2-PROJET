@@ -1,0 +1,13 @@
+[tabindex]:focus { background-color: grey;}
+.green{
+    background-color: #E8F5E9;
+}
+
+hr {
+    margin:0;
+    padding: 0;
+}
+
+.discussion:last-child hr {
+    display: none;
+  }

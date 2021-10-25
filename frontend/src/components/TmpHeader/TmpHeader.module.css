@@ -1,0 +1,39 @@
+.tmpHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 101px;
+    width: 100%;
+    position: fixed;
+    padding: 0 10% 0 15%;
+    z-index: 998;
+    background-color: white;
+}
+
+.headerLogo{
+    width: 30%;
+}
+
+.headerButtons span{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+    .headerButtons span{
+        margin: 0 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .headerLogo{
+        width: 50%;
+    }
+
+    .tmpHeader{
+        padding: 0 5% 0 10%;
+    }
+}

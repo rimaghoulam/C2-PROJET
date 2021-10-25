@@ -1,0 +1,79 @@
+.tmpHome {
+	height: calc(100vh - 101px);
+	/* min-height: 483px; */
+}
+
+.tmpHomeTop100{
+    height: 100% !important;
+}
+
+/* .tmpHome span {
+	height: 100% !important;
+} */
+
+.tmpHomeTop {
+	display: flex;
+	flex-wrap: wrap;
+	/* min-height: calc(70% - 101px); */
+	height: 80%;
+}
+
+.tmpHomeHero {
+	background: hsl(172, 100%, 35%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 35px 50px;
+	color: white;
+	min-height: 100%;
+}
+
+.tmpHomeHero > h3 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.tmpHomeHero > button {
+	background-color: hsl(34, 100%, 46%);
+	border: 1px solid hsl(34, 100%, 46%);
+	padding: 1rem 1.5rem;
+	margin: 3rem 0 0.5rem 0;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 200ms;
+}
+
+.tmpHomeHero .loginLink {
+	color: hsl(34, 100%, 56%);
+	cursor: pointer;
+}
+
+.tmpHomeHero .loginLink:hover {
+	color: hsl(34, 100%, 46%);
+}
+
+.tmpHomeHero > button:hover {
+	background-color: hsl(34, 100%, 56%);
+	border: 1px solid hsl(34, 100%, 56%);
+}
+
+.tmpHomeVideo {
+	min-height: 100%;
+}
+
+.tmpHomeBottom {
+	height: 19%;
+}
+
+.signInSpan {
+    height: fit-content !important;
+}
+
+
+@media (max-width: 992px) {
+	.tmpHome {
+		min-height: 483px !important;
+        height: fit-content;
+	}
+}

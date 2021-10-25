@@ -1,0 +1,115 @@
+/* .container{
+    padding: 4% 8%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1;
+} */
+
+.close{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: grey;
+}
+
+.Toastify__toast-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.Toastify__toast-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* .modal-content {
+    width: 95% !important;
+    
+} */
+/* .logo{
+    width: 25%;
+    height: 30%;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 8%;
+    margin-top: -8%;
+} */
+
+
+
+/* .title{
+    margin-top: 3%;
+    margin-left: 8% !important;
+} */
+
+
+.inputText{
+    border-radius: 0% im !important;
+    margin-top: 6%;
+    width: 75%;
+    align-self: center;
+    justify-self: center;
+}
+
+
+@media screen and (max-width: 500px) {
+    .inputText{
+        width: 100% !important;
+    }
+  }
+
+
+.forgot_login{
+    font-size: 0.8em;
+    margin-top: 6%;
+}
+
+.forgot{
+    margin-left: 12% !important;
+    justify-self: center;
+    margin-top: 2%;
+}
+
+.login{
+    width: fit-content !important;
+    margin-left: auto;
+    margin-right: 7%;
+    text-align: center;
+}
+
+.register{
+    margin-top: 9%;
+    align-self: center;
+    justify-self: center;
+    font-size: 0.85em;
+    color: black;
+}
+
+.link:hover{
+    cursor: pointer;
+    color: grey;
+    text-decoration: underline;
+}
+
+
+.groupfocusinput:focus-within{
+    color: #495057;
+    background-color: #fff;
+    border-color: #00b266 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+ 
+}
+
+.groupfocusinput input:focus{
+     box-shadow:none;
+}
+
+.formInputError{
+    border: 1px solid red !important;
+}
+
+@media screen and (max-width : 600px){
+    .pad-0{
+        padding: 2.5% 0% !important;
+  }
+}
